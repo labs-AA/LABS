@@ -1,0 +1,16 @@
+pipeline {
+    agent { label 'Host1'
+    }
+    stages {
+        stage('Deploy') {
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh '/bin/hostname'
+                }
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh '/bin/hostname'
+                }
+            }
+        }
+    }
+}
