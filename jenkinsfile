@@ -1,6 +1,7 @@
 pipeline {
-    agent { label 'Host1,Host2'
+    agent { label 'Host1',label 'Host2'
     }
+
     stages {
         stage('Deploy') {
             steps {
